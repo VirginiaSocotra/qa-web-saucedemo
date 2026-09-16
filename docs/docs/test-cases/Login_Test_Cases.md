@@ -73,7 +73,31 @@
 - An authentication error message is displayed.
 
 
-## TC-LOGIN-004 — Login with empty username
+## TC-LOGIN-004 — Login with invalid username and invalid password
+
+**Related Scenario:** LS-04  
+**Priority:** Medium  
+**Type:** Functional / Negative
+
+### Preconditions
+- User is on the SauceDemo Login page.
+
+### Test Data
+- Username: invalid_user
+- Password: wrong_password
+
+### Steps
+1. Enter `invalid_user` into the Username field.
+2. Enter `wrong_password` into the Password field.
+3. Click the Login button.
+
+### Expected Result
+- Login is rejected.
+- User remains on the Login page.
+- An authentication error message is displayed.
+
+
+## TC-LOGIN-005 — Login with empty username
 
 **Related Scenario:** LS-05  
 **Priority:** High  
@@ -96,7 +120,7 @@
 - A validation message for the required username is displayed.
 
 
-## TC-LOGIN-005 — Login with empty password
+## TC-LOGIN-006 — Login with empty password
 
 **Related Scenario:** LS-06  
 **Priority:** High  
@@ -118,7 +142,8 @@
 - Login is rejected.
 - A validation message for the required password is displayed.
 
-  ## TC-LOGIN-006 — Login with empty username and empty password
+
+## TC-LOGIN-007 — Login with empty username and password
 
 **Related Scenario:** LS-07  
 **Priority:** High  
@@ -138,11 +163,10 @@
 
 ### Expected Result
 - Login is rejected.
-- User remains on the Login page.
 - A validation message for the required username is displayed.
 
 
-## TC-LOGIN-007 — Login with locked-out user
+## TC-LOGIN-008 — Login with locked-out user
 
 **Related Scenario:** LS-08  
 **Priority:** High  
@@ -167,77 +191,20 @@
 - An error message indicating that the user is locked out is displayed.
 
 
-## TC-LOGIN-008 — Login with uppercase username
-
-**Related Scenario:** LS-09  
-**Priority:** Medium  
-**Type:** Functional / Negative
-
-### Preconditions
-- User is on the SauceDemo Login page.
-
-### Test Data
-- Username: STANDARD_USER
-- Password: secret_sauce
-
-### Steps
-1. Enter `STANDARD_USER` into the Username field.
-2. Enter `secret_sauce` into the Password field.
-3. Click the Login button.
-
-### Expected Result
-- Login is rejected.
-- User remains on the Login page.
-- An authentication error message is displayed.
-
-
 ## TC-LOGIN-009 — Logout after successful authentication
 
-**Related Scenario:** LS-10  
+**Related Scenario:** LS-09  
 **Priority:** High  
 **Type:** Functional / Positive
 
 ### Preconditions
-- User is on the SauceDemo Login page.
-- User account is active.
-
-### Test Data
-- Username: standard_user
-- Password: secret_sauce
+- User is logged in to SauceDemo.
 
 ### Steps
-1. Enter `standard_user` into the Username field.
-2. Enter `secret_sauce` into the Password field.
-3. Click the Login button.
-4. Verify that the Products page is displayed.
-5. Open the navigation menu.
-6. Click the Logout option.
+1. Open the navigation menu.
+2. Click the Logout option.
 
 ### Expected Result
 - User is successfully logged out.
 - User is redirected to the Login page.
 - Authenticated content is no longer displayed.
-
-
-## TC-LOGIN-010 — Login with uppercase password
-
-**Related Scenario:** LS-11  
-**Priority:** Medium  
-**Type:** Functional / Negative
-
-### Preconditions
-- User is on the SauceDemo Login page.
-
-### Test Data
-- Username: standard_user
-- Password: SECRET_SAUCE
-
-### Steps
-1. Enter `standard_user` into the Username field.
-2. Enter `SECRET_SAUCE` into the Password field.
-3. Click the Login button.
-
-### Expected Result
-- Login is rejected.
-- User remains on the Login page.
-- An authentication error message is displayed.
