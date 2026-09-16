@@ -43,7 +43,7 @@ URL: https://www.saucedemo.com/
 
 Platform: Desktop Web
 
-Browser: Safari
+Browser: Chrome
 
 Operating System: macOS
 
