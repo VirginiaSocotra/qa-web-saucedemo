@@ -2,6 +2,7 @@
 
 ## TC-LOGIN-001 — Login with valid credentials
 
+**Related Scenario:** LS-01  
 **Priority:** High  
 **Type:** Functional / Positive
 
@@ -23,8 +24,10 @@
 - User is redirected to the Products page.
 - Product catalog is displayed.
 
-  ## TC-LOGIN-002 — Login with valid username and invalid password
 
+## TC-LOGIN-002 — Login with valid username and invalid password
+
+**Related Scenario:** LS-02  
 **Priority:** High  
 **Type:** Functional / Negative
 
@@ -44,9 +47,11 @@
 - Login is rejected.
 - User remains on the Login page.
 - An authentication error message is displayed.
-  
-  ## TC-LOGIN-003 — Login with invalid username and valid password
 
+
+## TC-LOGIN-003 — Login with invalid username and valid password
+
+**Related Scenario:** LS-03  
 **Priority:** High  
 **Type:** Functional / Negative
 
@@ -67,8 +72,10 @@
 - User remains on the Login page.
 - An authentication error message is displayed.
 
-  ## TC-LOGIN-004 — Login with empty username
 
+## TC-LOGIN-004 — Login with empty username
+
+**Related Scenario:** LS-05  
 **Priority:** High  
 **Type:** Validation / Negative
 
@@ -86,10 +93,12 @@
 
 ### Expected Result
 - Login is rejected.
-- Validation message for required username is displayed.
+- A validation message for the required username is displayed.
 
-  ## TC-LOGIN-005 — Login with empty password
 
+## TC-LOGIN-005 — Login with empty password
+
+**Related Scenario:** LS-06  
 **Priority:** High  
 **Type:** Validation / Negative
 
@@ -107,6 +116,4 @@
 
 ### Expected Result
 - Login is rejected.
-- Validation message for required password is displayed.
-
-  
+- A validation message for the required password is displayed.
