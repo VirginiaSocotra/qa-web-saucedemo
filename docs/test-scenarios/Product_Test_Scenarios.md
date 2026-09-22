@@ -33,29 +33,3 @@ Verify that the product catalog displays product information correctly and allow
 | PS-14 | Sort products by name from Z to A |
 | PS-15 | Sort products by price from low to high |
 | PS-16 | Sort products by price from high to low |
-
-## TC-PRODUCT-002 — Verify product information for all displayed products
-
-**Related Scenarios:** PS-02, PS-03, PS-04, PS-05, PS-06  
-**Priority:** High  
-**Type:** Functional / UI
-
-### Preconditions
-- User is logged in.
-- Products page is displayed.
-
-### Steps
-1. Review all products displayed in the catalog.
-2. Verify that each product contains a product name.
-3. Verify that each product contains a description.
-4. Verify that each product contains a price.
-5. Verify that each product contains an image.
-6. Verify that each product contains an Add to cart button.
-
-### Expected Result
-- 6 products are displayed.
-- Each product contains a name.
-- Each product contains a description.
-- Each product contains a price.
-- Each product contains an image.
-- Each product contains an Add to cart button.
