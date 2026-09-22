@@ -37,3 +37,7 @@ Status: Pass
 | TC-PRODUCT-006 | User returned successfully to the Products page using the Back to products button. | Pass |
 | TC-PRODUCT-007 | Product was added to the cart. Add to cart changed to Remove and cart badge was updated. | Pass |
 | TC-PRODUCT-008 | Product was removed from the cart. Remove changed to Add to cart and cart badge was updated. | Pass |
+| TC-PRODUCT-009 | Products were displayed in alphabetical order from A to Z. All 6 products remained visible. | Pass |
+| TC-PRODUCT-010 | Products were displayed in reverse alphabetical order from Z to A. All 6 products remained visible. | Pass |
+| TC-PRODUCT-011 | Products were displayed in ascending order by price. All 6 products remained visible. | Pass |
+| TC-PRODUCT-012 | Products were displayed in descending order by price. All 6 products remained visible. | Pass |
