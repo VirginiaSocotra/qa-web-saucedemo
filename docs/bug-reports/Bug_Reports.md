@@ -314,6 +314,16 @@ Users cannot complete their purchase.
 ### Actual Result
 Product image placeholders or incorrect images are displayed instead of the correct product images.
 
+### Evidence
+
+Checkout Overview with an empty order:
+
+![Empty cart checkout overview](../evidence/screenshots/BUG-001-empty-cart-overview.png)
+
+Successful purchase confirmation after submitting the empty order:
+
+![Successful checkout with empty cart](../evidence/screenshots/BUG-001-empty-cart-success.png)
+
 ### Expected Result
 Each product card should display the image corresponding to that product.
 
