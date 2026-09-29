@@ -92,13 +92,20 @@ Invalid product information displayed on the Product Details page:
 - Application: SauceDemo
 - Platform: Desktop Web
 - Browser: Google Chrome
-- Test Account: problem_user
+- Test Accounts:
+  - problem_user
+  - error_user
 
 ### Preconditions
-- User is logged in as `problem_user`.
+- User is logged in as either `problem_user` or `error_user`.
 - Products page is displayed.
 - Shopping cart is empty.
 
+  ### Reproducibility
+Reproduced with:
+- problem_user
+- error_user
+  
 ### Steps to Reproduce
 1. Review the products displayed on the Products page.
 2. Click Add to cart for different products one by one.
@@ -151,9 +158,9 @@ Text entered into the Last Name field appears in the First Name field:
 ![Last Name input appears in First Name field](../evidence/screenshots/BUG-004-last-name-input.png)
 
 
-## BUG-005 — Add to Cart button does not work on Product Details page
+## BUG-005 — Remove button does not remove supported products outside the Shopping Cart
 
-**Severity:** High  
+**Severity:** Medium  
 **Priority:** High  
 **Type:** Functional / Shopping Cart
 
@@ -161,26 +168,46 @@ Text entered into the Last Name field appears in the First Name field:
 - Application: SauceDemo
 - Platform: Desktop Web
 - Browser: Google Chrome
-- Test Account: problem_user
+- Test Accounts:
+  - problem_user
+  - error_user
 
 ### Preconditions
-- User is logged in as `problem_user`.
-- Product Details page is displayed.
+- User is logged in as either `problem_user` or `error_user`.
+- One of the products that can be successfully added to the cart has been added.
+- The Add to cart button has changed to Remove.
 
+ ### Reproducibility
+Reproduced with:
+- problem_user
+- error_user
+  
 ### Steps to Reproduce
-1. Open any product details page.
-2. Click the Add to Cart button.
-3. Check the cart badge.
+1. Add one of the supported products to the shopping cart.
+2. Verify that the Add to cart button changes to Remove.
+3. Click Remove on the Products page or Product Details page.
+4. Observe the button state and cart badge.
+5. Open the Shopping Cart page.
+6. Remove the same product from inside the cart.
 
 ### Actual Result
-The product is not added to the shopping cart and the cart badge is not updated.
+For products that can be successfully added to the cart:
+- The Add to cart button changes to Remove.
+- Clicking Remove on the Products page or Product Details page does not correctly remove the product.
+- The button does not change back to Add to cart.
+- The cart badge is not updated correctly.
+- The same product can be removed successfully from inside the Shopping Cart page.
+
+For products that cannot be added to the cart, the button never changes to Remove.
 
 ### Expected Result
-The selected product should be added to the cart and the cart badge should be updated.
+For any product that has been added to the cart:
+- Clicking Remove on the Products page or Product Details page should remove the product from the cart.
+- The button should change back to Add to cart.
+- The cart badge should be updated.
 
 ### Impact
-Users cannot add products to the cart from the Product Details page.
-
+Users can add only some products to the cart, and even for those products the cart state cannot be managed correctly outside the Shopping Cart page.
 
 ## BUG-006 — Product sorting displays an application error
 
@@ -200,20 +227,21 @@ Users cannot add products to the cart from the Product Details page.
 
 ### Steps to Reproduce
 1. Open the product sorting dropdown.
-2. Select any sorting option.
-3. Observe the application behavior.
+2. Select any sorting option, for example `Name (Z to A)`.
+3. Observe the product list and displayed message.
 
 ### Actual Result
-Products are not sorted and the application displays the error:
+Products are not sorted according to the selected option.
+
+The application displays the error:
 
 `Sorting is broken! This error has been reported to Backtrace.`
 
 ### Expected Result
-Products should be reordered according to the selected sorting option without displaying an error.
+Products should be reordered according to the selected sorting option without displaying an application error.
 
 ### Impact
 Users cannot use product sorting functionality.
-
 
 ## BUG-007 — Product prices change after page refresh
 
