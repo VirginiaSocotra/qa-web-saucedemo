@@ -243,6 +243,12 @@ Products should be reordered according to the selected sorting option without di
 ### Impact
 Users cannot use product sorting functionality.
 
+### Evidence
+
+Sorting error displayed after selecting a sorting option:
+
+![Sorting error](../evidence/screenshots/BUG-006-sorting-error.png)
+
 ## BUG-007 — Product prices change after page refresh
 
 **Severity:** High  
