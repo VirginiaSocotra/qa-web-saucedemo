@@ -66,7 +66,7 @@ The Product Details page should display the correct product name, description, a
 Users receive invalid and misleading product information.
 
 
-## BUG-003 — Shopping cart contains products different from those selected
+## BUG-003 — Add to Cart works only for specific products
 
 **Severity:** High  
 **Priority:** High  
@@ -76,27 +76,27 @@ Users receive invalid and misleading product information.
 - Application: SauceDemo
 - Platform: Desktop Web
 - Browser: Google Chrome
-- Test Account: problem_user
+- Test Account: error_user
 
 ### Preconditions
-- User is logged in as `problem_user`.
+- User is logged in as `error_user`.
 - Products page is displayed.
 - Shopping cart is empty.
 
 ### Steps to Reproduce
-1. Add one or more products to the shopping cart.
-2. Open the shopping cart.
-3. Compare the cart contents with the products selected on the Products page.
+1. Review the products displayed on the Products page.
+2. Click Add to cart for different products one by one.
+3. Observe the button state and cart badge after each attempt.
 
 ### Actual Result
-The shopping cart contains products that do not correspond to the products selected by the user.
+Only specific products can be added to the shopping cart.
+For other products, clicking Add to cart does not add the product and the cart state is not updated.
 
 ### Expected Result
-The shopping cart should contain exactly the products selected by the user.
+Each available product should be added to the shopping cart when the user clicks Add to cart.
 
 ### Impact
-Users may purchase unintended products.
-
+Users are unable to purchase some available products.
 
 ## BUG-004 — Last Name input appears in First Name field
 
