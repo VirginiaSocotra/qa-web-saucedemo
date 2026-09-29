@@ -8,56 +8,100 @@ Explore SauceDemo beyond predefined test cases in order to identify unexpected f
 
 ### Findings
 
-#### EX-PU-01 — Product images are not loaded correctly
-**Area:** Product Catalog  
-**Observation:** Product image placeholders are displayed instead of the correct product images on the Products page.  
-**Potential Impact:** Users cannot visually identify products correctly.  
+#### EX-PU-01 — Incorrect product images are displayed in the catalog
+
+**Area:** Product Catalog
+
+**Observation:** Product images displayed on the Products page do not correspond to the actual products.
+
+**Potential Impact:** Users receive misleading visual information while browsing the product catalog.
+
 **Needs Bug Report:** Yes
 
-#### EX-PU-02 — Incorrect product content is displayed on Product Details page
-**Area:** Product Details  
-**Observation:** After opening a product, content belonging to another product may be displayed on the Product Details page.  
-**Potential Impact:** Users may receive incorrect information about the selected product.  
+
+#### EX-PU-02 — Product card opens a different product on the Product Details page
+
+**Area:** Product Catalog / Product Details
+
+**Observation:** A product card on the Products page displays the name and price of one product, but after opening the product, the Product Details page displays the name and price of a different product.
+
+The image displayed on the Product Details page corresponds to the product shown in the details.
+
+**Potential Impact:** Users may select one product from the catalog but be redirected to a different product with different information and price.
+
 **Needs Bug Report:** Yes
 
-#### EX-PU-03 — Add to Cart button does not work on Product Details page
-**Area:** Product Details / Shopping Cart  
-**Observation:** Clicking the Add to Cart button on the Product Details page does not add the product to the shopping cart.  
-**Potential Impact:** Users cannot purchase a product from the Product Details page.  
+
+#### EX-PU-03 — Only specific products can be added to the shopping cart
+
+**Area:** Product Catalog / Product Details / Shopping Cart
+
+**Observation:** Only three specific products can be successfully added to the shopping cart. Other products do not respond correctly to the Add to cart action.
+
+**Potential Impact:** Users cannot purchase all products available in the catalog.
+
 **Needs Bug Report:** Yes
+
 
 #### EX-PU-04 — Invalid data is displayed for Sauce Labs Fleece Jacket
-**Area:** Product Details  
+
+**Area:** Product Details
+
 **Observation:** Sauce Labs Fleece Jacket displays invalid product information:
 - Name: `ITEM NOT FOUND`
 - Unexpected error text is displayed as the description
 - Price: `$√-1`
 
-**Potential Impact:** Product information is unusable and misleading.  
+**Potential Impact:** Product information is unusable and misleading.
+
 **Needs Bug Report:** Yes
 
-#### EX-PU-05 — Remove action does not update product and cart state
-**Area:** Product Catalog / Product Details / Shopping Cart  
-**Observation:** After clicking Remove, the button does not change back to Add to cart and the cart badge is not updated.  
-**Potential Impact:** The UI does not reflect the actual shopping cart state.  
+
+#### EX-PU-05 — Remove action does not work correctly outside the Shopping Cart
+
+**Area:** Product Catalog / Product Details / Shopping Cart
+
+**Observation:** For products that can be successfully added to the cart, the Add to cart button changes to Remove.
+
+However, clicking Remove on the Products page or Product Details page does not correctly remove the product, the button does not change back to Add to cart, and the cart badge is not updated correctly.
+
+The same products can be removed successfully from inside the Shopping Cart page.
+
+**Potential Impact:** Users cannot reliably manage shopping cart contents from the Products page or Product Details page.
+
 **Needs Bug Report:** Yes
+
 
 #### EX-PU-06 — Product sorting does not work
-**Area:** Product Catalog  
-**Observation:** Changing the sorting option does not correctly reorder the products.  
-**Potential Impact:** Users cannot sort products as expected.  
+
+**Area:** Product Catalog
+
+**Observation:** Changing the sorting option does not correctly reorder the products.
+
+**Potential Impact:** Users cannot sort products as expected.
+
 **Needs Bug Report:** Yes
 
-#### EX-PU-07 — Shopping cart contains incorrect products
-**Area:** Shopping Cart  
-**Observation:** Products displayed in the shopping cart do not correspond to the products selected by the user.  
-**Potential Impact:** Users may purchase unintended products.  
+
+#### EX-PU-07 — Add to Cart action fails for some products on Product Details page
+
+**Area:** Product Details / Shopping Cart
+
+**Observation:** For some products, clicking the Add to cart button on the Product Details page does not add the product to the shopping cart.
+
+**Potential Impact:** Users cannot add some products to the cart from the Product Details page.
+
 **Needs Bug Report:** Yes
+
 
 #### EX-PU-08 — Last Name input is entered into First Name field
-**Area:** Checkout Information  
-**Observation:** Characters entered into the Last Name field appear in the First Name field while the Last Name field remains empty.  
-**Potential Impact:** Users cannot correctly enter checkout information.  
+
+**Area:** Checkout Information
+
+**Observation:** Characters entered into the Last Name field appear in the First Name field while the Last Name field remains empty.
+
+**Potential Impact:** Users cannot correctly enter checkout information.
+
 **Needs Bug Report:** Yes
 
 ## Session 2 — Performance Glitch User
