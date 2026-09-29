@@ -400,3 +400,9 @@ The correct product image should be displayed on the product card.
 
 ### Impact
 Users cannot correctly identify the affected product visually.
+
+### Evidence
+
+Product image placeholder displayed on the Products page:
+
+![Missing product image](../evidence/screenshots/BUG-010-missing-product-image.png)
