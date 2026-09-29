@@ -329,6 +329,16 @@ Product prices should remain consistent after page refresh unless the product da
 ### Impact
 Users receive inconsistent pricing information and may not know the actual product price.
 
+### Evidence
+
+Product prices before page refresh:
+
+![Prices before refresh](../evidence/screenshots/BUG-008-prices-before-refresh.png)
+
+Product prices after page refresh:
+
+![Prices after refresh](../evidence/screenshots/BUG-008-prices-after-refresh.png)
+
 ## BUG-009 — Finish button does not complete checkout
 
 **Severity:** High  
