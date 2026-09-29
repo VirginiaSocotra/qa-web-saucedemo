@@ -32,6 +32,16 @@ Checkout should not be completed when the shopping cart contains no products.
 ### Impact
 The application allows an invalid order with no products to be completed.
 
+### Evidence
+
+Checkout Overview with an empty order:
+
+![Empty cart checkout overview](../evidence/screenshots/BUG-001-empty-cart-overview.png)
+
+Successful purchase confirmation after submitting the empty order:
+
+![Successful checkout with empty cart](../evidence/screenshots/BUG-001-empty-cart-success.png)
+
 
 ## BUG-002 — Invalid product data is displayed for Sauce Labs Fleece Jacket
 
@@ -64,6 +74,12 @@ The Product Details page should display the correct product name, description, a
 
 ### Impact
 Users receive invalid and misleading product information.
+
+### Evidence
+
+Invalid product information displayed on the Product Details page:
+
+![Invalid Sauce Labs Fleece Jacket data](../evidence/screenshots/BUG-002-invalid-fleece-jacket-data.png).
 
 
 ## BUG-003 — Add to Cart works only for specific products
@@ -127,6 +143,12 @@ Entered characters should appear only in the Last Name field.
 
 ### Impact
 Users cannot correctly enter customer information required for checkout.
+
+### Evidence
+
+Text entered into the Last Name field appears in the First Name field:
+
+![Last Name input appears in First Name field](../evidence/screenshots/BUG-004-last-name-input.png)
 
 
 ## BUG-005 — Add to Cart button does not work on Product Details page
@@ -314,24 +336,6 @@ Users cannot complete their purchase.
 ### Actual Result
 Product image placeholders or incorrect images are displayed instead of the correct product images.
 
-### Evidence
 
-Checkout Overview with an empty order:
 
-![Empty cart checkout overview](../evidence/screenshots/BUG-001-empty-cart-overview.png)
 
-Successful purchase confirmation after submitting the empty order:
-
-![Successful checkout with empty cart](../evidence/screenshots/BUG-001-empty-cart-success.png)
-
-### Evidence
-
-Invalid product information displayed on the Product Details page:
-
-![Invalid Sauce Labs Fleece Jacket data](../evidence/screenshots/BUG-002-invalid-fleece-jacket-data.png)
-
-### Expected Result
-Each product card should display the image corresponding to that product.
-
-### Impact
-Users cannot visually identify products correctly.
