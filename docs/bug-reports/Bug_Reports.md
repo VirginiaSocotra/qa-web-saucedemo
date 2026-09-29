@@ -249,7 +249,39 @@ Sorting error displayed after selecting a sorting option:
 
 ![Sorting error](../evidence/screenshots/BUG-006-sorting-error.png)
 
-## BUG-007 — Product prices change after page refresh
+## BUG-007 — Incorrect product images are displayed on the Products page
+
+**Severity:** Medium  
+**Priority:** Medium  
+**Type:** UI / Data
+
+### Environment
+- Application: SauceDemo
+- Platform: Desktop Web
+- Browser: Google Chrome
+- Test Account: problem_user
+
+### Preconditions
+- User is logged in as `problem_user`.
+- Products page is displayed.
+
+### Steps to Reproduce
+1. Review the product cards on the Products page.
+2. Compare the displayed product images with the corresponding product names.
+3. Open a product to compare the catalog image with the Product Details page.
+
+### Actual Result
+Incorrect product images are displayed on the Products page.
+
+The Product Details page displays the correct product image.
+
+### Expected Result
+Each product card on the Products page should display the image corresponding to that product.
+
+### Impact
+Users receive incorrect visual information while browsing the catalog.**
+
+## BUG-008 — Product prices change after page refresh
 
 **Severity:** High  
 **Priority:** High  
@@ -281,7 +313,7 @@ Product prices should remain consistent after page refresh unless the product da
 Users receive inconsistent pricing information and may not know the actual product price.
 
 
-## BUG-008 — Remove action does not update cart state
+## BUG-009 — Remove action does not update cart state
 
 **Severity:** Medium  
 **Priority:** High  
@@ -315,7 +347,7 @@ The cart badge should update to reflect the current number of products.
 The interface displays an incorrect shopping cart state.
 
 
-## BUG-009 — Finish button does not complete checkout
+## BUG-010 — Finish button does not complete checkout
 
 **Severity:** High  
 **Priority:** High  
@@ -347,7 +379,7 @@ Checkout should be completed and the order confirmation page should be displayed
 Users cannot complete their purchase.
 
 
-## BUG-010 — Product images are not loaded correctly
+## BUG-011 — Product images are not loaded correctly
 
 **Severity:** Medium  
 **Priority:** Medium  
