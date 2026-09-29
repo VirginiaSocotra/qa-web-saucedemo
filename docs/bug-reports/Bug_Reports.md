@@ -76,10 +76,10 @@ Users receive invalid and misleading product information.
 - Application: SauceDemo
 - Platform: Desktop Web
 - Browser: Google Chrome
-- Test Account: error_user
+- Test Account: problem_user
 
 ### Preconditions
-- User is logged in as `error_user`.
+- User is logged in as `problem_user`.
 - Products page is displayed.
 - Shopping cart is empty.
 
