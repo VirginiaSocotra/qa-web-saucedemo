@@ -324,6 +324,12 @@ Successful purchase confirmation after submitting the empty order:
 
 ![Successful checkout with empty cart](../evidence/screenshots/BUG-001-empty-cart-success.png)
 
+### Evidence
+
+Invalid product information displayed on the Product Details page:
+
+![Invalid Sauce Labs Fleece Jacket data](../evidence/screenshots/BUG-002-invalid-fleece-jacket-data.png)
+
 ### Expected Result
 Each product card should display the image corresponding to that product.
 
