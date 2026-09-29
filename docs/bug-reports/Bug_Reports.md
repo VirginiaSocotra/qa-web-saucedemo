@@ -249,11 +249,11 @@ Sorting error displayed after selecting a sorting option:
 
 ![Sorting error](../evidence/screenshots/BUG-006-sorting-error.png)
 
-## BUG-007 — Incorrect product images are displayed on the Products page
+## BUG-007 — Product card displays information for a different product
 
-**Severity:** Medium  
-**Priority:** Medium  
-**Type:** UI / Data
+**Severity:** High  
+**Priority:** High  
+**Type:** Functional / Data Mapping
 
 ### Environment
 - Application: SauceDemo
@@ -266,20 +266,37 @@ Sorting error displayed after selecting a sorting option:
 - Products page is displayed.
 
 ### Steps to Reproduce
-1. Review the product cards on the Products page.
-2. Compare the displayed product images with the corresponding product names.
-3. Open a product to compare the catalog image with the Product Details page.
+1. Locate a product card on the Products page.
+2. Note the displayed product name and price.
+3. Click the product name or image to open the Product Details page.
+4. Compare the product name, price, and image with the information displayed in the catalog.
 
 ### Actual Result
-Incorrect product images are displayed on the Products page.
+The product card on the Products page displays the name and price of one product.
 
-The Product Details page displays the correct product image.
+After opening the product, the Product Details page displays the name and price of a different product.
+
+The product image on the Product Details page corresponds to the product shown in the details.
 
 ### Expected Result
-Each product card on the Products page should display the image corresponding to that product.
+The product opened from the Products page should match the selected product card.
+
+The product name, price, image, and other product information should remain consistent between the Products page and the Product Details page.
 
 ### Impact
-Users receive incorrect visual information while browsing the catalog.**
+Users may select one product from the catalog but be redirected to a different product.
+
+This can cause confusion and may result in users purchasing a product different from the one they intended to select.
+
+### Evidence
+
+Product information displayed on the Products page:
+
+![Product displayed in catalog](../evidence/screenshots/BUG-007-catalog-product.png)
+
+Product Details page opened from the same product card:
+
+![Different product displayed in details](../evidence/screenshots/BUG-007-product-details.png)
 
 ## BUG-008 — Product prices change after page refresh
 
