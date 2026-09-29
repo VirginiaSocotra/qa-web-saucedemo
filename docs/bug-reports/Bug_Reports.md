@@ -329,42 +329,7 @@ Product prices should remain consistent after page refresh unless the product da
 ### Impact
 Users receive inconsistent pricing information and may not know the actual product price.
 
-
-## BUG-009 — Remove action does not update cart state
-
-**Severity:** Medium  
-**Priority:** High  
-**Type:** Functional / Shopping Cart
-
-### Environment
-- Application: SauceDemo
-- Platform: Desktop Web
-- Browser: Google Chrome
-- Test Account: problem_user
-
-### Preconditions
-- User is logged in as `problem_user`.
-- At least one product has been added to the shopping cart.
-
-### Steps to Reproduce
-1. Add a product to the shopping cart.
-2. Click the Remove button.
-3. Observe the button state.
-4. Check the cart badge.
-
-### Actual Result
-The Remove button does not change back to Add to cart and the cart badge is not updated correctly.
-
-### Expected Result
-The product should be removed.
-The button should change back to Add to cart.
-The cart badge should update to reflect the current number of products.
-
-### Impact
-The interface displays an incorrect shopping cart state.
-
-
-## BUG-010 — Finish button does not complete checkout
+## BUG-009 — Finish button does not complete checkout
 
 **Severity:** High  
 **Priority:** High  
@@ -396,7 +361,7 @@ Checkout should be completed and the order confirmation page should be displayed
 Users cannot complete their purchase.
 
 
-## BUG-011 — Product images are not loaded correctly
+## BUG-010 — Product image is not loaded on the Products page
 
 **Severity:** Medium  
 **Priority:** Medium  
@@ -406,19 +371,22 @@ Users cannot complete their purchase.
 - Application: SauceDemo
 - Platform: Desktop Web
 - Browser: Google Chrome
-- Test Account: problem_user
+- Test Account: visual_user
 
 ### Preconditions
-- User is logged in as `problem_user`.
+- User is logged in as `visual_user`.
 - Products page is displayed.
 
 ### Steps to Reproduce
-1. Review the product cards on the Products page.
-2. Observe the product images.
+1. Open the Products page.
+2. Review the product cards.
+3. Observe the affected product image.
 
 ### Actual Result
-Product image placeholders or incorrect images are displayed instead of the correct product images.
+A product image is not loaded correctly and a placeholder is displayed instead of the expected product image.
 
+### Expected Result
+The correct product image should be displayed on the product card.
 
-
-
+### Impact
+Users cannot correctly identify the affected product visually.
